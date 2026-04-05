@@ -93,5 +93,87 @@
         <!-- Styles CSS  -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
-    <body></body>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Logo -->
+                    <a href="#!" class="logo">
+                        <img src="./assets/img/logo-lucy.svg" alt="Lucy Pet" />
+                    </a>
+                    <!-- Navigation -->
+                    <nav>
+                        <div class="navbar">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a
+                                        href="#!"
+                                        class="nav__link active"
+                                        data-text="Home"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="nav__item">
+                                    <a
+                                        href="#!"
+                                        class="nav__link"
+                                        data-text="About"
+                                        >About</a
+                                    >
+                                </li>
+                                <li class="nav__item">
+                                    <a
+                                        href="#!"
+                                        class="nav__link"
+                                        data-text="Services & Rates"
+                                    >
+                                        Services & Rates
+                                    </a>
+                                </li>
+                                <li class="nav__item">
+                                    <a
+                                        href="#!"
+                                        class="nav__link"
+                                        data-text="Reviews"
+                                        >Reviews</a
+                                    >
+                                </li>
+                                <li class="nav__item">
+                                    <a
+                                        href="#!"
+                                        class="nav__link"
+                                        data-text="Contacts us"
+                                    >
+                                        Contacts us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- Header Action -->
+                    <div class="header-action">
+                        <a
+                            href="#!"
+                            class="header-action__link"
+                            data-text="Sign in"
+                            >Sign in</a
+                        >
+                        <a href="#!" class="btn header-action__btn">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script>
+            const navLinks = document.querySelectorAll(".nav__link");
+            navLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    navLinks.forEach((link) => {
+                        link.classList.remove("active");
+                    });
+                    link.classList.add("active");
+                });
+            });
+        </script>
+    </body>
 </html>
