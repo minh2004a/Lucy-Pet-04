@@ -164,16 +164,144 @@
                 </div>
             </div>
         </header>
+
+        <!-- Hero -->
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__inner">
+                        <!-- Media -->
+                        <div class="hero__media">
+                            <div class="hero__media-wrap">
+                                <img
+                                    src="./assets/img/pet-01.png"
+                                    alt=""
+                                    class="hero__media-img"
+                                />
+
+                                <!-- Decor -->
+                                <img
+                                    src="./assets/img/decor-01.svg"
+                                    alt=""
+                                    class="hero__media-decor hero__media-left"
+                                />
+                                <img
+                                    src="./assets/img/decor-02.svg"
+                                    alt=""
+                                    class="hero__media-decor hero__media-right"
+                                />
+                            </div>
+                            <div
+                                class="hero__media-wrap hero__media-wrap-small"
+                            >
+                                <img
+                                    src="./assets/img/pet-02.png"
+                                    alt=""
+                                    class="hero__media-img hero__media-img-small"
+                                />
+                            </div>
+                            <!-- Card -->
+                            <div class="hero__card">
+                                <!-- Card 1 -->
+                                <div class="hero-card-item">
+                                    <img
+                                        src="./assets/img/pet-03.png"
+                                        alt=""
+                                        class="hero-card-item__thumb"
+                                    />
+                                    <div class="hero-card-item__info">
+                                        <p class="hero-card-item__title">
+                                            Pet health
+                                        </p>
+                                        <div
+                                            class="hero-card-item__skeleton"
+                                        ></div>
+                                        <div
+                                            class="hero-card-item__skeleton"
+                                            style="--width: 39px"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <span class="hero-card-item__separate"></span>
+                                <!-- Card 2 -->
+                                <div class="hero-card-item">
+                                    <img
+                                        src="./assets/img/pet-04.png"
+                                        alt=""
+                                        class="hero-card-item__thumb"
+                                    />
+                                    <div class="hero-card-item__info">
+                                        <p class="hero-card-item__title">
+                                            Pet care
+                                        </p>
+                                        <div
+                                            class="hero-card-item__skeleton"
+                                        ></div>
+                                        <div
+                                            class="hero-card-item__skeleton"
+                                            style="--width: 39px"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="hero__content">
+                            <div class="hero__content-wrap">
+                                <h1 class="hero__heading">
+                                    Established & Trusted Pet Care Service
+                                </h1>
+                                <p class="hero__desc">
+                                    Discover a wide variety of Pawsitive
+                                    services to choose from, including daycare,
+                                    private walks, office duty and spa.
+                                </p>
+                                <div class="hero__row">
+                                    <a
+                                        href="#!"
+                                        class="btn btn--primary hero__ctn-btn"
+                                    >
+                                        Book a Meet
+                                        <span class="hero__icon">
+                                            <svg
+                                                width="4"
+                                                height="6"
+                                                viewBox="0 0 4 6"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M0.5 0.5L3 3L0.5 5.5"
+                                                    stroke="#FD5056"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg> </span
+                                    ></a>
+
+                                    <a href="#!" class="hero__ctn-link">
+                                        Schedule a Call
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         <script>
-            const navLinks = document.querySelectorAll(".nav__link");
-            navLinks.forEach((link) => {
-                link.addEventListener("click", () => {
-                    navLinks.forEach((link) => {
-                        link.classList.remove("active");
+            const handleActiveNav = () => {
+                const navLinks = document.querySelectorAll(".nav__link");
+                navLinks.forEach((link) => {
+                    link.addEventListener("click", () => {
+                        navLinks.forEach((el) => {
+                            el.classList.remove("active");
+                        });
+                        link.classList.add("active");
                     });
-                    link.classList.add("active");
                 });
-            });
+            };
+            handleActiveNav();
         </script>
     </body>
 </html>
